@@ -11,7 +11,8 @@ async function run() {
 			`${join(process.cwd(), 'node_modules/eslint/bin/eslint')}`,
 			'--ext',
 			'js,jsx,ts,tsx',
-			`--max-warnings ${maxWarnings}`,
+			`--max-warnings`,
+			maxWarnings,
 			customGlob,
 		];
 		await exec('node', args);
