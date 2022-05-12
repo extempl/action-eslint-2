@@ -9,10 +9,9 @@ async function run() {
 		console.log(`##[add-matcher]${join(__dirname, '..', '.github', 'eslint-stylish.json')}`);
 		const args = [
 			`${join(process.cwd(), 'node_modules/eslint/bin/eslint')}`,
+			`--max-warnings=${maxWarnings}`,
 			'--ext',
 			'js,jsx,ts,tsx',
-			`--max-warnings`,
-			maxWarnings,
 			customGlob,
 		];
 		await exec('node', args);
