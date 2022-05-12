@@ -9,6 +9,10 @@ inputs:
     description: 'Custom glob to overwrite which files to lint.'
     required: false
     default: 'src'
+  max-warnings:
+    description: 'Max warnings'
+    required: false
+    default: '-1'
 runs:
   using: 'node12'
   main: 'dist/index.js'
